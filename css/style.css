@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans Extrabold", sans-serif;
+}
+
+body{
+    background: #404398;
+    padding-bottom: 120px;
+}
+
+canvas{
+    border: 2px solid white;
+    margin-top: 20px;
+}
