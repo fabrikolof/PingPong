@@ -11,11 +11,22 @@ export default class BoardView{
         this.ctx = canvas.getContext("2d");
     }
 
+    clean(){
+        this.ctx.clearRect(0,0,this.board.width, this.board.height);
+    }
+
     draw(){
-        console.log(this.board.elements);
+        //console.log(this.board.elements);
         for(let i =  this.board.elements.length -1 ; i >= 0; i--) {
             let elementOfBoard = this.board.elements[i];
             draw(this.ctx, elementOfBoard);
         }
     }
+
+    play(){
+        this.clean();
+        this.draw();
+    }
+
+
 }

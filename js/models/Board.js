@@ -19,10 +19,9 @@ export default class Board{
     }
 
     get elements(){
-
         let elements = this.bars.map((element)=>element); // Envio una copia para resguardar la referencia.
+        elements.push(this.ball)
         return elements;
-
     }
 
 }
