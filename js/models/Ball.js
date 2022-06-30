@@ -24,6 +24,28 @@ export default class Ball{
         return this.radius*2;
     }
 
+    
+    collision(bar){
+        //Reacciona a la colision con una barra.
+
+        //calcular en angulo con el que se va a mover cuando colisione.
+        let relative_intersect_y = ( bar.y + (bar.height / 2) ) - this.y;
+
+        let normalized_intersect_y = relative_intersect_y / (bar.height / 2);
+
+        this.bounce_angle = normalized_intersect_y * this.max_bounce_angle;
+
+        this.speedY = this.speed * -Math.sin(this.bounce_angle);
+        this.speedX = this.speed * Math.cos(this.bounce_angle);
+
+        if (this.x > (this.board.width / 2)){
+            this.direction = -1;
+        }else{
+            this.direction = 1;
+        }
+
+    }
+    
     move(){
         this.x += this.speedX * this.direction;
         this.y += this.speedY;
@@ -37,10 +59,10 @@ export default class Ball{
         }
 
         //Rebota cuando llega al límite del largo de nuestro lienzo.
-        if(this.x + this.radius > this.board.getWidth ||
-            this.x + this.radius <= 20 ){
+        // if(this.x + this.radius > this.board.getWidth ||
+        //     this.x + this.radius <= 20 ){
 
-            this.speedX = -this.speedX;
-        }
+        //     this.speedX = -this.speedX;
+        // }
     }
 }
