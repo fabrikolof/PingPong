@@ -24,8 +24,11 @@ export default class BoardView{
     }
 
     play(){
-        this.clean();
-        this.draw();
+        if(this.board.playing) {
+            this.clean();
+            this.draw();
+            this.board.ball.move();
+        }
     }
 
 

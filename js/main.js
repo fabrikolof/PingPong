@@ -18,28 +18,29 @@ boardView.draw();
 
 
 
-
-
-
-
-
 //Evento para escuchar cuando una tecla es presionada.
 document.addEventListener('keydown',(event)=>{
 
-    event.preventDefault();
-
-    //console.log(event.key);
+    
+    // console.log(event);
     
     if(event.key=="w"){
+        event.preventDefault();
         barLeft.up();
         // console.log(barLeft.y);
     }else if(event.key=="s"){
+        event.preventDefault();
         barLeft.down();
         // console.log(barLeft.y);
     }else if(event.key=="ArrowUp"){
+        event.preventDefault();
         barRight.up();
     }else if(event.key=="ArrowDown"){
+        event.preventDefault();
         barRight.down();
+    } else if (event.code == "Space") {
+        event.preventDefault();
+        board.playing = !board.playing;
     }
 
 })

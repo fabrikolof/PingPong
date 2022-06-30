@@ -24,4 +24,23 @@ export default class Ball{
         return this.radius*2;
     }
 
+    move(){
+        this.x += this.speedX * this.direction;
+        this.y += this.speedY;
+
+        //mejorar
+        //Validamos la posicion en y para hacer rebotar la pelota, cambiando la direccion.
+        if(this.y + this.radius > this.board.getHeight ||
+            this.y + this.radius <= 20 ){
+
+            this.speedY = -this.speedY;
+        }
+
+        //Rebota cuando llega al límite del largo de nuestro lienzo.
+        if(this.x + this.radius > this.board.getWidth ||
+            this.x + this.radius <= 20 ){
+
+            this.speedX = -this.speedX;
+        }
+    }
 }
