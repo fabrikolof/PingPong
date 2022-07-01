@@ -13,11 +13,15 @@ export default class Bar{
     }
 
     up(){
-        this.y -= this.speed;
+        if(0 < this.y){
+            this.y -= this.speed;
+        }
     }
 
     down(){
-        this.y += this.speed;
+        if(this.board.height-100 > this.y){
+            this.y += this.speed;
+        }
     }
 
 }

@@ -2,15 +2,49 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Gill Sans Extrabold", sans-serif;
 }
 
 body{
-    background: #404398;
+    background: #FAEA48;
     padding-bottom: 120px;
 }
 
 canvas{
-    border: 2px solid white;
+    border: 2px solid #3330E4;
     margin-top: 20px;
+    background-color: #FBB454;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoresContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    font-family:cursive;
+}
+
+.scoresContainer p{
+    width: min-content;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#player1, #player2 {
+    color: #F637EC;
+}
+
+#scoreLeft, #scoreRight {
+    color: #3330E4;
+}
+
+h1 {
+    color: #FBB454;
+    font-size: 5rem;
 }

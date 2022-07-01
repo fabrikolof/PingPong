@@ -6,14 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PingPong</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-    <h1>PingPong</h1>
 
-    <!-- Esto es un elemento canvas que es donde vamos a estar dibujando
-    las cosas, lo que hace es colocar un lienzo en blanco y lo que se dibuja en
-    el es controlado por JavaScript  -->
-    <canvas id="canvas"></canvas>
+    
+    <div class="container">
+
+        <h1>PingPong</h1>
+
+        <div class="scoresContainer">
+            <p><span id="player1">Player1</span> <span id="scoreLeft">0</span></p>
+            <p><span id="player2">Player2</span> <span id="scoreRight">0</span></p>
+        </div>
+    
+        <!-- Esto es un elemento canvas que es donde vamos a estar dibujando
+        las cosas, lo que hace es colocar un lienzo en blanco y lo que se dibuja en
+        el es controlado por JavaScript  -->
+        <div class="canvasContainer">
+            <canvas id="canvas"></canvas>
+        </div>
+        
+    </div>
 
 
 
